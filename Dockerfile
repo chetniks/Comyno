@@ -8,6 +8,7 @@ RUN /usr/local/bin/mvn-entrypoint.sh mvn dependency:resolve
 COPY . ./
 
 # Maven build
+# I would use 'mvn clean install --quiet' but i didn't have time to resolve all tests errors so allowing build without them for now
 RUN mvn clean package -DskipTests=true
 RUN cp target/contact.jar /app/backend.jar
 RUN chmod a+x /app/backend.jar
