@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - develop
+      - 'dev1'   
+      - 'dev2/**'
+
+name: Unit Test
+
+jobs:
+  deploy:
+    name: Unit Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Compile
+      run: |
+         mvn clean package -DskipTests=true
+    
+    - name: Unit Tests
+      run: |
+         mvn surefire:test

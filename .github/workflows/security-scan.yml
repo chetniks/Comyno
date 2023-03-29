@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - 'dev2/**'
+jobs:
+  security-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: nixos/nix:latest
+      options: --user root
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install casascan
+        run: nix-env -if https://github.com/fluidattacks/makes/archive/22.09.tar.gz
+      - name: Run tests
+        run: |
+           git config --global --add safe.directory '*'
+           m gitlab:fluidattacks/universe@trunk /skims scan ./fluid-config.yaml
+      - name: Upload results
+        uses: actions/upload-artifact@v1
+        with:
+          name: csv-report
+          path: ./Fluid-Attacks-Results.csv

@@ -1,0 +1,26 @@
+
+on:
+  push:
+    branches:
+      - 'develop' 
+      - 'release/**'
+      - 'hotfix/**'
+
+name: Integration-Test
+
+jobs:
+  deploy:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Compile
+      run: |
+         mvn clean package -DskipTests=true
+     
+    - name: Integration Tests
+      run: |
+         mvn failsafe:integration-test

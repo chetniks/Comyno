@@ -1,0 +1,109 @@
+on:
+  push:
+    branches:
+      - develop
+      - 'dev1/**'     
+      - 'dev2/**'
+      - 'release/**'
+      - 'hotfix/**'
+
+name: Deploy to Amazon ECR
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: sourceai
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Get timestamp
+      id: timestamp
+      run: |
+        echo "TIMESTAMP=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Set ENVIRONMENT to dev
+      if: endsWith(github.ref, '/develop')
+      run: |
+        echo "ENVIRONMENT=dev" >> $GITHUB_ENV
+        echo "DOMAIN=dev.comydo.com" >> $GITHUB_ENV
+        echo "FLUX_WEBHOOK_URL=${{ secrets.FLUX_WEBHOOK_URL_dev_info }}" >> $GITHUB_ENV
+
+    - name: Set ENVIRONMENT to dev1
+      if: contains(github.ref, 'dev1/')
+      run: |
+        echo "ENVIRONMENT=dev1" >> $GITHUB_ENV
+        echo "DOMAIN=dev1.comydo.com" >> $GITHUB_ENV
+        echo "FLUX_WEBHOOK_URL=${{ secrets.FLUX_WEBHOOK_URL_dev1_info }}" >> $GITHUB_ENV
+
+    - name: Set ENVIRONMENT to dev2
+      if: contains(github.ref, 'dev2/')
+      run: |
+        echo "ENVIRONMENT=dev2" >> $GITHUB_ENV
+        echo "DOMAIN=dev2.comydo.com" >> $GITHUB_ENV
+        echo "FLUX_WEBHOOK_URL=${{ secrets.FLUX_WEBHOOK_URL_dev2_info }}" >> $GITHUB_ENV
+
+    - name: Set ENVIRONMENT to test
+      if: contains(github.ref, 'release/') || contains(github.ref, 'hotfix/')
+      run: |
+        echo "ENVIRONMENT=test" >> $GITHUB_ENV
+        echo "DOMAIN=test.comydo.com" >> $GITHUB_ENV
+        echo "FLUX_WEBHOOK_URL=${{ secrets.FLUX_WEBHOOK_URL_test_info }}" >> $GITHUB_ENV
+
+    - name: Create GitHub deployment
+      uses: chrnorm/deployment-action@v2
+      id: deployment
+      with:
+        token: "${{ github.token }}"
+        environment: ${{ env.ENVIRONMENT }}
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+    
+    - name: Set image ECR, name and tag
+      id: image-ref
+      run: |
+        IMAGE_NAME="Comyno/projectSrdjan"
+        IMAGE_TAG="$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)-${GITHUB_SHA::10}-$TIMESTAMP"
+        echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
+        echo "IMAGE_K8S_TAG=$IMAGE_TAG-$ENVIRONMENT" >> $GITHUB_ENV
+        echo "ECR_IMAGE_NAME=${{ steps.login-ecr.outputs.registry }}/$IMAGE_NAME" >> $GITHUB_ENV
+        echo "application.version=$IMAGE_TAG" > src/main/resources/application-version.properties
+
+    - name: Build, tag, and push image to Amazon ECR
+      uses: docker/build-push-action@v3
+      with:
+        context: sourceai
+        push: true
+        tags: ${{env.ECR_IMAGE_NAME}}:${{env.IMAGE_TAG}}, ${{env.ECR_IMAGE_NAME}}:${{env.IMAGE_K8S_TAG}}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Notify Kubernetes for the new image
+      id: notify-fluxreceiver
+      if: "${{ env.FLUX_WEBHOOK_URL != '' }}"
+      # If failing make sure that fluxreceiver is same as corresponding secret. I.e. for develop:
+      #  1. kubectl get receiver/fluxreceiver-images -n develop  # Receiver initialized with URL: /hook/xxxxxxxxxx
+      #  2. secrets.FLUX_WEBHOOK_URL_dev_info is set to URL: https://fluxreceiver.dev.comydo.com/hook/xxxxxxxxxx
+      run: |
+        curl --fail $FLUX_WEBHOOK_URL
