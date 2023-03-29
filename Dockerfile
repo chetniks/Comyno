@@ -10,8 +10,8 @@ COPY . ./
 # Maven build
 # I would use 'mvn clean install --quiet' but i didn't have time to resolve all tests errors so allowing build without them for now
 RUN mvn clean package -DskipTests=true
-RUN cp target/contact.jar /app/backend.jar
-RUN chmod a+x /app/backend.jar
+RUN cp target/contact.jar /app/contact.jar
+RUN chmod a+x /app/contact.jar
 
 ## TOOLING
 FROM alpine:latest as tooling
@@ -25,8 +25,8 @@ RUN wget -O newrelic.jar https://download.newrelic.com/newrelic/java-agent/newre
 ## MAIN
 FROM gcr.io/distroless/java17
 
-COPY --from=builder /app/backend.jar /usr/share/
+COPY --from=builder /app/contact.jar /usr/share/
 COPY --from=tooling newrelic.jar /usr/share/newrelic/
 COPY --from=builder /app/docker/newrelic.yml /usr/share/newrelic/
 EXPOSE 8080
-ENTRYPOINT ["java", "-javaagent:/usr/share/newrelic/newrelic.jar", "-XX:+PreserveFramePointer", "-jar", "/usr/share/backend.jar"]
+ENTRYPOINT ["java", "-javaagent:/usr/share/newrelic/newrelic.jar", "-XX:+PreserveFramePointer", "-jar", "/usr/share/contact.jar"]
