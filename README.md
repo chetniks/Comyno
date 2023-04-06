@@ -20,6 +20,8 @@ The application will be available on `http://localhost:8080`
 
 ### TESTS examples
 
+Test
+
 Application is tested using different kids of test:
 
 * Unit

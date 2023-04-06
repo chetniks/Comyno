@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.pik.contact.service.unit.ContactServiceTest" time="0.347" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.18+10-post-Ubuntu-0ubuntu120.04.1"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/srdjan/repos/Comyno"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/srdjan/repos/Comyno"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.18+10-post-Ubuntu-0ubuntu120.04.1"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.14.0-1059-oem"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/srdjan"/>
+    <property name="user.timezone" value="Europe/Belgrade"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="srdjan"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher surefire:test"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="11.0.18"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="com.pik.contact.service.unit.ContactServiceTest" classname="com.pik.contact.service.unit.ContactServiceTest" time="0.347">
+    <error message="&#10;Mockito cannot mock this class: interface com.pik.contact.repository.ContactRepository.&#10;&#10;Mockito can only mock non-private &amp; non-final classes.&#10;If you&apos;re not sure why you&apos;re getting this error, please report to the mailing list.&#10;&#10;&#10;Java               : 11&#10;JVM vendor name    : Ubuntu&#10;JVM vendor version : 11.0.18+10-post-Ubuntu-0ubuntu120.04.1&#10;JVM name           : OpenJDK 64-Bit Server VM&#10;JVM version        : 11.0.18+10-post-Ubuntu-0ubuntu120.04.1&#10;JVM info           : mixed mode, sharing&#10;OS name            : Linux&#10;OS version         : 5.14.0-1059-oem&#10;&#10;&#10;Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection" type="org.mockito.exceptions.base.MockitoException"><![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.pik.contact.repository.ContactRepository.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 11
+JVM vendor name    : Ubuntu
+JVM vendor version : 11.0.18+10-post-Ubuntu-0ubuntu120.04.1
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 11.0.18+10-post-Ubuntu-0ubuntu120.04.1
+JVM info           : mixed mode, sharing
+OS name            : Linux
+OS version         : 5.14.0-1059-oem
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection
+	at org.mockito.internal.runners.DefaultInternalRunner$1.withBefores(DefaultInternalRunner.java:39)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:276)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:79)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:85)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Unavailable.defineClass(ClassInjector.java:821)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.inject(ClassInjector.java:185)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:187)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:79)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:4457)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:138)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:346)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:161)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:355)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:36)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:57)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+	at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.withBefores(DefaultInternalRunner.java:39)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:276)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:79)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:85)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.IllegalStateException: Could not find sun.misc.Unsafe
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe$Dispatcher$Disabled.initialize(ClassInjector.java:1366)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe.inject(ClassInjector.java:1202)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$ForUnsafeInjection.load(ClassLoadingStrategy.java:458)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:79)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:4457)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Indirect.make(ClassInjector.java:684)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$CreationAction.run(ClassInjector.java:302)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$CreationAction.run(ClassInjector.java:290)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.<clinit>(ClassInjector.java:70)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:184)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:79)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:4457)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:138)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:346)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:161)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:355)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:36)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:57)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+	at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.withBefores(DefaultInternalRunner.java:39)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:276)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:79)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:85)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NoSuchMethodException: sun.misc.Unsafe.defineClass(java.lang.String, [B, int, int, java.lang.ClassLoader, java.security.ProtectionDomain)
+	at java.base/java.lang.Class.getMethod(Class.java:2108)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe$Dispatcher$CreationAction.run(ClassInjector.java:1269)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe$Dispatcher$CreationAction.run(ClassInjector.java:1257)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe.<clinit>(ClassInjector.java:1136)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$ForUnsafeInjection.load(ClassLoadingStrategy.java:458)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:79)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:4457)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Indirect.make(ClassInjector.java:684)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$CreationAction.run(ClassInjector.java:302)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$CreationAction.run(ClassInjector.java:290)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.<clinit>(ClassInjector.java:70)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:184)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:79)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:4457)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:138)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:346)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:161)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:355)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:36)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:57)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+	at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.withBefores(DefaultInternalRunner.java:39)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:276)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:79)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:85)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></error>
+    <system-out><![CDATA[13:23:23.693 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.pik.contact.service.integration.ContactServiceTest]
+13:23:23.697 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:23:23.707 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:23:23.722 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.pik.contact.service.integration.ContactServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:23:23.733 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.pik.contact.service.integration.ContactServiceTest], using SpringBootContextLoader
+13:23:23.735 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pik.contact.service.integration.ContactServiceTest]: class path resource [com/pik/contact/service/integration/ContactServiceTest-context.xml] does not exist
+13:23:23.736 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pik.contact.service.integration.ContactServiceTest]: class path resource [com/pik/contact/service/integration/ContactServiceTestContext.groovy] does not exist
+13:23:23.736 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.pik.contact.service.integration.ContactServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:23:23.797 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.pik.contact.service.integration.ContactServiceTest]
+13:23:23.935 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.pik.contact.service.integration.ContactServiceTest]: using defaults.
+13:23:23.935 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+13:23:23.947 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@302c971f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1972e513, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ae0a9ec, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@35841320, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61c4eee0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6f10d5b6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1040be71, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@548a24a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@433defed, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a693f59, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3f4faf53, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7fd50002]
+13:23:23.950 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.pik.contact.api.ContactControllerTest]
+13:23:23.950 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:23:23.950 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:23:23.950 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.pik.contact.api.ContactControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:23:23.951 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.pik.contact.api.ContactControllerTest], using SpringBootContextLoader
+13:23:23.951 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pik.contact.api.ContactControllerTest]: class path resource [com/pik/contact/api/ContactControllerTest-context.xml] does not exist
+13:23:23.952 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pik.contact.api.ContactControllerTest]: class path resource [com/pik/contact/api/ContactControllerTestContext.groovy] does not exist
+13:23:23.952 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.pik.contact.api.ContactControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:23:23.954 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.pik.contact.api.ContactControllerTest]
+13:23:23.956 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.pik.contact.api.ContactControllerTest]: using defaults.
+13:23:23.956 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+13:23:23.956 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b695b06, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4d1bf319, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f53b8a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5c80cf32, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7d900ecf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6f01b95f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4007f65e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1a245833, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@673fdbce, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5965d37, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a5ceedd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4201c465]
+13:23:23.959 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.pik.contact.gui.selenium.test.ContactsTest]
+13:23:23.959 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:23:23.959 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:23:23.959 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.pik.contact.gui.selenium.test.ContactsTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:23:23.959 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.pik.contact.gui.selenium.test.ContactsTest], using SpringBootContextLoader
+13:23:23.960 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pik.contact.gui.selenium.test.ContactsTest]: class path resource [com/pik/contact/gui/selenium/test/ContactsTest-context.xml] does not exist
+13:23:23.961 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pik.contact.gui.selenium.test.ContactsTest]: class path resource [com/pik/contact/gui/selenium/test/ContactsTestContext.groovy] does not exist
+13:23:23.961 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.pik.contact.gui.selenium.test.ContactsTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:23:23.963 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.pik.contact.gui.selenium.test.ContactsTest]
+13:23:23.964 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.pik.contact.gui.selenium.test.ContactsTest]: using defaults.
+13:23:23.964 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+13:23:23.964 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@239a307b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a8448fa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f204a1a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2de56eb2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f8e8a9d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5745ca0e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ad83a66, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3cce5371, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@17bffc17, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6e535154, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@15a34df2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5b38c1ec]
+13:23:23.967 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pik.contact.service.integration.ContactServiceTest]
+13:23:23.967 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pik.contact.service.integration.ContactServiceTest]
+13:23:23.967 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pik.contact.api.ContactControllerTest]
+13:23:23.967 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pik.contact.api.ContactControllerTest]
+13:23:23.967 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pik.contact.gui.selenium.test.ContactsTest]
+13:23:23.967 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pik.contact.gui.selenium.test.ContactsTest]
+]]></system-out>
+  </testcase>
+</testsuite>
