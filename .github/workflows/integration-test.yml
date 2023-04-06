@@ -17,9 +17,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     
-    - name: Compile
+    - name: Dependency
       run: |
-         mvn clean package -DskipTests=true
+         mvn dependency:resolve
      
     - name: Integration Tests
       run: |
