@@ -21,6 +21,7 @@ The application will be available on `http://localhost:8080`
 ### TESTS examples
 
 Test
+Feature2
 
 Application is tested using different kids of test:
 
